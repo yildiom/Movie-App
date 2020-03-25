@@ -1,0 +1,128 @@
+@import "./base/reset";
+@import "./base/fonts";
+@import "./base/variables";
+@import "./base/mixins";
+
+body{
+    padding: 2% 10%;
+}
+
+
+.formHolder{
+    width: 100%;
+    h1{
+        font-size: 50px;
+        font-family: 'Monoton', cursive;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    form{
+        margin-bottom: 20px;
+    }
+    .input{
+        border: 2px solid black;
+        width: 94%;
+        border-radius: 15px;
+        padding: 5px 10px;
+        font-family: 'Roboto', sans-serif;
+    }
+    .go{
+        border: 2px solid black;
+        padding: 3px 10px;
+        box-shadow: 3px 3px;
+        background-color: #fff;
+        font-family: 'Roboto', sans-serif;
+    }
+}
+
+.main{
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    .filterHolder{
+        width: 30%;
+        height: 400px;
+        margin-right: 25px;
+        fieldset{
+            border: 2px solid black;
+            width: 100%;
+            height: 100%;
+            padding: 20px 20px;
+            h3{
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+            legend{
+                margin-left: 10px;
+            }
+            select{
+                border: 2px solid black;
+                width: 90%;
+            }
+            .type{
+                margin: 20px 0;
+                input{
+                    margin: 10px 0;
+                }
+            }
+            .optionalFilters{
+                input{
+                    margin: 10px 0;
+                }
+            }
+        }
+        
+    }
+    .movieHolder{
+        width: 70%;
+        height: 587px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        .movieCard{
+            width: 155px;
+            height: 155px;
+            margin-right: 30px;
+            margin-left: 22px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            border: 2px solid black;
+            
+        }
+        h3{
+            text-align: center;
+        }
+    }
+
+}
+
+// MEDIA QUERIES//
+
+@media screen and (max-width: 1528px) {
+    .movieCard{
+        margin-bottom: 50px;
+    }
+    .formHolder{
+        width: 84%;
+    }
+  }
+
+  @media screen and (max-width: 1210px) {
+    .formHolder .input{
+        width: 90%;
+    }
+  }
+
+  @media screen and (max-width: 731px) {
+    .formHolder .input{
+        width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 570px) {
+    .filterHolder{
+        font-size: 12px;
+    }
+  }
